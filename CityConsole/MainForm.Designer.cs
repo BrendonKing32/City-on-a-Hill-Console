@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_Exit = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,20 +40,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button_Lock = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button_Exit
-            // 
-            this.button_Exit.Location = new System.Drawing.Point(713, 415);
-            this.button_Exit.Name = "button_Exit";
-            this.button_Exit.Size = new System.Drawing.Size(75, 23);
-            this.button_Exit.TabIndex = 0;
-            this.button_Exit.Text = "Exit";
-            this.button_Exit.UseVisualStyleBackColor = true;
-            this.button_Exit.Click += new System.EventHandler(this.button_Exit_Click);
             // 
             // monthCalendar1
             // 
@@ -150,15 +139,6 @@
             this.button3.Text = "Donation";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button_Lock
-            // 
-            this.button_Lock.Location = new System.Drawing.Point(632, 415);
-            this.button_Lock.Name = "button_Lock";
-            this.button_Lock.Size = new System.Drawing.Size(75, 23);
-            this.button_Lock.TabIndex = 5;
-            this.button_Lock.Text = "Lock";
-            this.button_Lock.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(608, 207);
@@ -168,23 +148,31 @@
             this.button1.Text = "Note";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(608, 294);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(180, 81);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Note";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 387);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button_Lock);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.menuStrip1);
-            this.Enabled = false;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "City on a Hill Console";
-            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -194,8 +182,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button_Exit;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -204,12 +190,12 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button_Lock;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attendanceHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donationHistoryToolStripMenuItem;
+        private System.Windows.Forms.Button button4;
     }
 }
 

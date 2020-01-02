@@ -12,6 +12,7 @@ namespace CityConsole
 {
     public partial class LoginForm : Form
     {
+        string adminPass = "John3:16";
         public LoginForm()
         {
             InitializeComponent();
@@ -19,7 +20,21 @@ namespace CityConsole
 
         private void button_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(1);
+        }
+
+        private void button_Cont_Click(object sender, EventArgs e)
+        {
+            string checkPass = adminPass;
+            string passConfirm = textBox_password.Text;
+            if (checkPass == passConfirm)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("PASSWORD INCORRECT");
+            }
         }
     }
 }

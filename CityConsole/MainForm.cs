@@ -35,7 +35,7 @@ namespace CityConsole
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
-            login.Show();
+            login.ShowDialog();
         }
     }
 }
