@@ -31,5 +31,11 @@ namespace CityConsole
         {
             MessageBox.Show("CITY ON A HILL CONSOLE" + "\nBRENDON KING 2020");
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+        }
     }
 }
