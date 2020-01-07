@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CityConsole
 {
-    public partial class UpdateAttendance : Form
+    public partial class UpdateAttendanceForm : Form
     {
-        public UpdateAttendance()
+        public UpdateAttendanceForm()
         {
             InitializeComponent();
         }

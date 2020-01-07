@@ -36,5 +36,22 @@ namespace CityConsole
                 MessageBox.Show("PASSWORD INCORRECT");
             }
         }
+
+        private void textBox_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode ==Keys.Enter)
+            {
+                string checkPass = adminPass;
+                string passConfirm = textBox_password.Text;
+                if (checkPass == passConfirm)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("PASSWORD INCORRECT");
+                }
+            }
+        }
     }
 }

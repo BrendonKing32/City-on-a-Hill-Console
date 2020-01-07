@@ -36,26 +36,30 @@
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(81, 12);
+            this.textBox_password.Location = new System.Drawing.Point(108, 15);
+            this.textBox_password.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(110, 20);
+            this.textBox_password.Size = new System.Drawing.Size(145, 22);
             this.textBox_password.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 15);
+            this.label2.Location = new System.Drawing.Point(29, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
             // button_Cont
             // 
-            this.button_Cont.Location = new System.Drawing.Point(127, 52);
+            this.button_Cont.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_Cont.Location = new System.Drawing.Point(169, 64);
+            this.button_Cont.Margin = new System.Windows.Forms.Padding(4);
             this.button_Cont.Name = "button_Cont";
-            this.button_Cont.Size = new System.Drawing.Size(75, 23);
+            this.button_Cont.Size = new System.Drawing.Size(100, 28);
             this.button_Cont.TabIndex = 4;
             this.button_Cont.Text = "Continue";
             this.button_Cont.UseVisualStyleBackColor = true;
@@ -63,9 +67,10 @@
             // 
             // button_Exit
             // 
-            this.button_Exit.Location = new System.Drawing.Point(12, 52);
+            this.button_Exit.Location = new System.Drawing.Point(16, 64);
+            this.button_Exit.Margin = new System.Windows.Forms.Padding(4);
             this.button_Exit.Name = "button_Exit";
-            this.button_Exit.Size = new System.Drawing.Size(75, 23);
+            this.button_Exit.Size = new System.Drawing.Size(100, 28);
             this.button_Exit.TabIndex = 5;
             this.button_Exit.Text = "Exit";
             this.button_Exit.UseVisualStyleBackColor = true;
@@ -73,14 +78,15 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(214, 92);
+            this.ClientSize = new System.Drawing.Size(285, 113);
             this.ControlBox = false;
             this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.button_Cont);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

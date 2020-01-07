@@ -44,7 +44,7 @@ namespace CityConsole
         //Returns   :
         private void button_Attendance_Click(object sender, EventArgs e)
         {
-            UpdateAttendance attendanceForm = new UpdateAttendance();
+            UpdateAttendanceForm attendanceForm = new UpdateAttendanceForm();
             attendanceForm.Show();
         }
     }
