@@ -37,5 +37,15 @@ namespace CityConsole
             LoginForm login = new LoginForm();
             login.ShowDialog();
         }
+
+        //Function  :
+        //Purpose   :
+        //Parameters:
+        //Returns   :
+        private void button_Attendance_Click(object sender, EventArgs e)
+        {
+            UpdateAttendance attendanceForm = new UpdateAttendance();
+            attendanceForm.Show();
+        }
     }
 }
