@@ -41,7 +41,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_Attendance = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Directory = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +72,7 @@
             this.openToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
@@ -81,7 +81,7 @@
             this.attendanceHistoryToolStripMenuItem,
             this.donationHistoryToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openToolStripMenuItem.Text = "Open...";
             // 
             // attendanceHistoryToolStripMenuItem
@@ -99,14 +99,14 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // helpToolStripMenuItem
@@ -114,7 +114,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -127,7 +127,7 @@
             // button_Attendance
             // 
             this.button_Attendance.Location = new System.Drawing.Point(811, 41);
-            this.button_Attendance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_Attendance.Margin = new System.Windows.Forms.Padding(4);
             this.button_Attendance.Name = "button_Attendance";
             this.button_Attendance.Size = new System.Drawing.Size(240, 100);
             this.button_Attendance.TabIndex = 3;
@@ -138,27 +138,28 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(811, 148);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(240, 100);
             this.button3.TabIndex = 4;
             this.button3.Text = "Donation";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button_Directory
             // 
-            this.button1.Location = new System.Drawing.Point(811, 255);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 100);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Note";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Directory.Location = new System.Drawing.Point(811, 255);
+            this.button_Directory.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Directory.Name = "button_Directory";
+            this.button_Directory.Size = new System.Drawing.Size(240, 100);
+            this.button_Directory.TabIndex = 6;
+            this.button_Directory.Text = "Directory";
+            this.button_Directory.UseVisualStyleBackColor = true;
+            this.button_Directory.Click += new System.EventHandler(this.button_Directory_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(811, 362);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(240, 100);
             this.button4.TabIndex = 7;
@@ -171,7 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 476);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Directory);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button_Attendance);
             this.Controls.Add(this.monthCalendar1);
@@ -179,7 +180,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "City on a Hill Console";
@@ -201,7 +202,7 @@
         private System.Windows.Forms.Button button_Attendance;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Directory;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attendanceHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donationHistoryToolStripMenuItem;

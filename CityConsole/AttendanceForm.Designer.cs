@@ -1,6 +1,6 @@
 ﻿namespace CityConsole
 {
-    partial class UpdateAttendanceForm
+    partial class AttendanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateAttendanceForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttendanceForm));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_Adults = new System.Windows.Forms.TextBox();
+            this.textBox_Children = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button_Submit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox_Notes = new System.Windows.Forms.ComboBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(16, 15);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 0;
@@ -56,19 +57,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Adults";
             // 
-            // textBox1
+            // textBox_Adults
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 22);
-            this.textBox1.TabIndex = 2;
+            this.textBox_Adults.Location = new System.Drawing.Point(95, 44);
+            this.textBox_Adults.Name = "textBox_Adults";
+            this.textBox_Adults.Size = new System.Drawing.Size(186, 22);
+            this.textBox_Adults.TabIndex = 1;
             // 
-            // textBox2
+            // textBox_Children
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 22);
-            this.textBox2.TabIndex = 4;
+            this.textBox_Children.Location = new System.Drawing.Point(95, 72);
+            this.textBox_Children.Name = "textBox_Children";
+            this.textBox_Children.Size = new System.Drawing.Size(186, 22);
+            this.textBox_Children.TabIndex = 3;
             // 
             // label2
             // 
@@ -79,21 +80,15 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Children";
             // 
-            // button1
+            // button_Submit
             // 
-            this.button1.Location = new System.Drawing.Point(212, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(95, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 22);
-            this.textBox3.TabIndex = 6;
+            this.button_Submit.Location = new System.Drawing.Point(212, 171);
+            this.button_Submit.Name = "button_Submit";
+            this.button_Submit.Size = new System.Drawing.Size(75, 23);
+            this.button_Submit.TabIndex = 5;
+            this.button_Submit.Text = "Submit";
+            this.button_Submit.UseVisualStyleBackColor = true;
+            this.button_Submit.Click += new System.EventHandler(this.button_Submit_Click);
             // 
             // label3
             // 
@@ -104,22 +99,44 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Notes";
             // 
-            // UpdateAttendance
+            // comboBox_Notes
+            // 
+            this.comboBox_Notes.FormattingEnabled = true;
+            this.comboBox_Notes.Items.AddRange(new object[] {
+            "Sunday Service",
+            "Potluck",
+            "5th Sunday",
+            "Special Speaker",
+            "Special Event"});
+            this.comboBox_Notes.Location = new System.Drawing.Point(95, 100);
+            this.comboBox_Notes.Name = "comboBox_Notes";
+            this.comboBox_Notes.Size = new System.Drawing.Size(186, 24);
+            this.comboBox_Notes.TabIndex = 8;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(16, 171);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(190, 23);
+            this.progressBar1.TabIndex = 9;
+            // 
+            // AttendanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 206);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.comboBox_Notes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button_Submit);
+            this.Controls.Add(this.textBox_Children);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Adults);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UpdateAttendance";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "AttendanceForm";
             this.Text = "Attendance";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,11 +147,12 @@
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_Adults;
+        private System.Windows.Forms.TextBox textBox_Children;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button_Submit;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox_Notes;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

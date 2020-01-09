@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button_Cont = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             this.Controls.Add(this.button_Cont);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
