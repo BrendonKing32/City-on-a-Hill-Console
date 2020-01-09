@@ -37,7 +37,6 @@
             this.button_Submit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox_Notes = new System.Windows.Forms.ComboBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -69,7 +68,7 @@
             this.textBox_Children.Location = new System.Drawing.Point(95, 72);
             this.textBox_Children.Name = "textBox_Children";
             this.textBox_Children.Size = new System.Drawing.Size(186, 22);
-            this.textBox_Children.TabIndex = 3;
+            this.textBox_Children.TabIndex = 2;
             // 
             // label2
             // 
@@ -85,7 +84,7 @@
             this.button_Submit.Location = new System.Drawing.Point(212, 171);
             this.button_Submit.Name = "button_Submit";
             this.button_Submit.Size = new System.Drawing.Size(75, 23);
-            this.button_Submit.TabIndex = 5;
+            this.button_Submit.TabIndex = 4;
             this.button_Submit.Text = "Submit";
             this.button_Submit.UseVisualStyleBackColor = true;
             this.button_Submit.Click += new System.EventHandler(this.button_Submit_Click);
@@ -111,21 +110,13 @@
             this.comboBox_Notes.Location = new System.Drawing.Point(95, 100);
             this.comboBox_Notes.Name = "comboBox_Notes";
             this.comboBox_Notes.Size = new System.Drawing.Size(186, 24);
-            this.comboBox_Notes.TabIndex = 8;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(16, 171);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(190, 23);
-            this.progressBar1.TabIndex = 9;
+            this.comboBox_Notes.TabIndex = 3;
             // 
             // AttendanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 206);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.comboBox_Notes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_Submit);
@@ -153,6 +144,5 @@
         private System.Windows.Forms.Button button_Submit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_Notes;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
