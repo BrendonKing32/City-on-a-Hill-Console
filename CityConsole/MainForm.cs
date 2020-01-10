@@ -44,13 +44,24 @@ namespace CityConsole
         //Returns   :
         private void button_Attendance_Click(object sender, EventArgs e)
         {
-            AttendanceForm attendanceForm = new AttendanceForm();
-            attendanceForm.Show();
+            
         }
 
         private void button_Directory_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void memberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewDirectoryForm directoryForm = new NewDirectoryForm();
+            directoryForm.ShowDialog();
+        }
+
+        private void attendanceRecordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AttendanceForm attendanceForm = new AttendanceForm();
+            attendanceForm.ShowDialog();
         }
     }
 }
