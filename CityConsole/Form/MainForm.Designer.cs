@@ -32,21 +32,21 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendanceRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.donationRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donationHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_Attendance = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button_Directory = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.attendanceRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.donationRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.noteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,6 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.viewToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -80,6 +79,37 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.memberToolStripMenuItem,
+            this.attendanceRecordToolStripMenuItem,
+            this.donationRecordToolStripMenuItem,
+            this.noteToolStripMenuItem});
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Text = "New...";
+            // 
+            // memberToolStripMenuItem
+            // 
+            this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.memberToolStripMenuItem.Text = "Member";
+            this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
+            // 
+            // attendanceRecordToolStripMenuItem
+            // 
+            this.attendanceRecordToolStripMenuItem.Name = "attendanceRecordToolStripMenuItem";
+            this.attendanceRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.attendanceRecordToolStripMenuItem.Text = "Attendance Record";
+            this.attendanceRecordToolStripMenuItem.Click += new System.EventHandler(this.attendanceRecordToolStripMenuItem_Click);
+            // 
+            // donationRecordToolStripMenuItem
+            // 
+            this.donationRecordToolStripMenuItem.Name = "donationRecordToolStripMenuItem";
+            this.donationRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.donationRecordToolStripMenuItem.Text = "Donation Record";
+            // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -92,13 +122,13 @@
             // attendanceHistoryToolStripMenuItem
             // 
             this.attendanceHistoryToolStripMenuItem.Name = "attendanceHistoryToolStripMenuItem";
-            this.attendanceHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.attendanceHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.attendanceHistoryToolStripMenuItem.Text = "Attendance History";
             // 
             // donationHistoryToolStripMenuItem
             // 
             this.donationHistoryToolStripMenuItem.Name = "donationHistoryToolStripMenuItem";
-            this.donationHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.donationHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.donationHistoryToolStripMenuItem.Text = "Donation History";
             // 
             // exitToolStripMenuItem
@@ -107,12 +137,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
             // 
             // helpToolStripMenuItem
             // 
@@ -125,7 +149,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -164,38 +188,15 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(180, 81);
             this.button4.TabIndex = 7;
-            this.button4.Text = "Note";
+            this.button4.Text = "Notes";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // newToolStripMenuItem
+            // noteToolStripMenuItem
             // 
-            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.memberToolStripMenuItem,
-            this.attendanceRecordToolStripMenuItem,
-            this.donationRecordToolStripMenuItem});
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newToolStripMenuItem.Text = "New...";
-            // 
-            // memberToolStripMenuItem
-            // 
-            this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.memberToolStripMenuItem.Text = "Member";
-            this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
-            // 
-            // attendanceRecordToolStripMenuItem
-            // 
-            this.attendanceRecordToolStripMenuItem.Name = "attendanceRecordToolStripMenuItem";
-            this.attendanceRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.attendanceRecordToolStripMenuItem.Text = "Attendance Record";
-            this.attendanceRecordToolStripMenuItem.Click += new System.EventHandler(this.attendanceRecordToolStripMenuItem_Click);
-            // 
-            // donationRecordToolStripMenuItem
-            // 
-            this.donationRecordToolStripMenuItem.Name = "donationRecordToolStripMenuItem";
-            this.donationRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.donationRecordToolStripMenuItem.Text = "Donation Record";
+            this.noteToolStripMenuItem.Name = "noteToolStripMenuItem";
+            this.noteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noteToolStripMenuItem.Text = "Note";
+            this.noteToolStripMenuItem.Click += new System.EventHandler(this.noteToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -226,7 +227,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button button_Attendance;
@@ -241,6 +241,7 @@
         private System.Windows.Forms.ToolStripMenuItem memberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attendanceRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donationRecordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem noteToolStripMenuItem;
     }
 }
 

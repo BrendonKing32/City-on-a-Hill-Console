@@ -63,5 +63,10 @@ namespace CityConsole
             AttendanceForm attendanceForm = new AttendanceForm();
             attendanceForm.ShowDialog();
         }
+
+        private void noteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

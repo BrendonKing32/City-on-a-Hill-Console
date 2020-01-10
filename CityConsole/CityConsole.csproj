@@ -52,48 +52,63 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CityonaHillDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NewDirectoryForm.cs">
+    <Compile Include="Form\NewObj\NewDirectoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewDirectoryForm.Designer.cs">
+    <Compile Include="Form\NewObj\NewDirectoryForm.Designer.cs">
       <DependentUpon>NewDirectoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Form\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Form\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewDonationForm.cs">
+    <Compile Include="Form\NewObj\NewDonationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewDonationForm.Designer.cs">
+    <Compile Include="Form\NewObj\NewDonationForm.Designer.cs">
       <DependentUpon>NewDonationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NewAttendanceForm.cs">
+    <Compile Include="Form\NewObj\NewAttendanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AttendanceForm.Designer.cs">
+    <Compile Include="Form\NewObj\AttendanceForm.Designer.cs">
       <DependentUpon>NewAttendanceForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="NewAttendanceForm.resx">
-      <DependentUpon>NewAttendanceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewDirectoryForm.resx">
+    <Compile Include="Form\DispObj\ShowAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DispObj\ShowAttendance.Designer.cs">
+      <DependentUpon>ShowAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DispObj\ShowDirectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DispObj\ShowDirectory.Designer.cs">
+      <DependentUpon>ShowDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DispObj\ShowDonation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DispObj\ShowDonation.Designer.cs">
+      <DependentUpon>ShowDonation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\NewObj\NewDirectoryForm.resx">
       <DependentUpon>NewDirectoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -105,7 +120,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AttendanceForm.resx">
+    <EmbeddedResource Include="Form\NewObj\AttendanceForm.resx">
       <DependentUpon>NewAttendanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CityonaHillDataSet.xsc">
@@ -137,5 +152,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
