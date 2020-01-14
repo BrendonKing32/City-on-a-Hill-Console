@@ -115,9 +115,6 @@
     <EmbeddedResource Include="Form\DispObj\ShowDirectory.resx">
       <DependentUpon>ShowDirectory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\NewObj\NewAttendanceForm.resx">
-      <DependentUpon>NewAttendanceForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\NewObj\NewDirectoryForm.resx">
       <DependentUpon>NewDirectoryForm.cs</DependentUpon>
     </EmbeddedResource>
