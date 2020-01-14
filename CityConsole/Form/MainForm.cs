@@ -44,7 +44,8 @@ namespace CityConsole
         //Returns   :
         private void button_Attendance_Click(object sender, EventArgs e)
         {
-            
+            ShowAttendance ShowForm = new ShowAttendance();
+            ShowForm.Show();
         }
 
         private void button_Directory_Click(object sender, EventArgs e)

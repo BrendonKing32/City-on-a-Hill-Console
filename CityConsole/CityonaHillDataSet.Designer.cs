@@ -316,7 +316,7 @@ namespace CityConsole {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnAttendanceDate;
+            private global::System.Data.DataColumn columnService_Date;
             
             private global::System.Data.DataColumn columnAdults;
             
@@ -367,9 +367,9 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AttendanceDateColumn {
+            public global::System.Data.DataColumn Service_DateColumn {
                 get {
-                    return this.columnAttendanceDate;
+                    return this.columnService_Date;
                 }
             }
             
@@ -434,11 +434,11 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AttendanceRow AddAttendanceRow(System.DateTime AttendanceDate, int Adults, int Children, string Notes) {
+            public AttendanceRow AddAttendanceRow(System.DateTime Service_Date, int Adults, int Children, string Notes) {
                 AttendanceRow rowAttendanceRow = ((AttendanceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        AttendanceDate,
+                        Service_Date,
                         Adults,
                         Children,
                         Notes};
@@ -472,7 +472,7 @@ namespace CityConsole {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnAttendanceDate = base.Columns["AttendanceDate"];
+                this.columnService_Date = base.Columns["Service Date"];
                 this.columnAdults = base.Columns["Adults"];
                 this.columnChildren = base.Columns["Children"];
                 this.columnNotes = base.Columns["Notes"];
@@ -483,8 +483,8 @@ namespace CityConsole {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnAttendanceDate = new global::System.Data.DataColumn("AttendanceDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAttendanceDate);
+                this.columnService_Date = new global::System.Data.DataColumn("Service Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnService_Date);
                 this.columnAdults = new global::System.Data.DataColumn("Adults", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAdults);
                 this.columnChildren = new global::System.Data.DataColumn("Children", typeof(int), null, global::System.Data.MappingType.Element);
@@ -640,6 +640,10 @@ namespace CityConsole {
             
             private global::System.Data.DataColumn columnEmail;
             
+            private global::System.Data.DataColumn columnAddress1;
+            
+            private global::System.Data.DataColumn columnAddress2;
+            
             private global::System.Data.DataColumn columnBirthday;
             
             private global::System.Data.DataColumn columnDateJoined;
@@ -711,6 +715,22 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Address1Column {
+                get {
+                    return this.columnAddress1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Address2Column {
+                get {
+                    return this.columnAddress2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn BirthdayColumn {
                 get {
                     return this.columnBirthday;
@@ -762,13 +782,15 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MembersRow AddMembersRow(string FirstName, string LastName, string Email, System.DateTime Birthday, System.DateTime DateJoined) {
+            public MembersRow AddMembersRow(string FirstName, string LastName, string Email, string Address1, string Address2, System.DateTime Birthday, System.DateTime DateJoined) {
                 MembersRow rowMembersRow = ((MembersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         FirstName,
                         LastName,
                         Email,
+                        Address1,
+                        Address2,
                         Birthday,
                         DateJoined};
                 rowMembersRow.ItemArray = columnValuesArray;
@@ -804,6 +826,8 @@ namespace CityConsole {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnEmail = base.Columns["Email"];
+                this.columnAddress1 = base.Columns["Address1"];
+                this.columnAddress2 = base.Columns["Address2"];
                 this.columnBirthday = base.Columns["Birthday"];
                 this.columnDateJoined = base.Columns["DateJoined"];
             }
@@ -819,6 +843,10 @@ namespace CityConsole {
                 base.Columns.Add(this.columnLastName);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
+                this.columnAddress1 = new global::System.Data.DataColumn("Address1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress1);
+                this.columnAddress2 = new global::System.Data.DataColumn("Address2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress2);
                 this.columnBirthday = new global::System.Data.DataColumn("Birthday", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBirthday);
                 this.columnDateJoined = new global::System.Data.DataColumn("DateJoined", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -833,6 +861,8 @@ namespace CityConsole {
                 this.columnFirstName.MaxLength = 255;
                 this.columnLastName.MaxLength = 255;
                 this.columnEmail.MaxLength = 255;
+                this.columnAddress1.MaxLength = 255;
+                this.columnAddress2.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -986,17 +1016,17 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime AttendanceDate {
+            public System.DateTime Service_Date {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAttendance.AttendanceDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableAttendance.Service_DateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AttendanceDate\' in table \'Attendance\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Service Date\' in table \'Attendance\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAttendance.AttendanceDateColumn] = value;
+                    this[this.tableAttendance.Service_DateColumn] = value;
                 }
             }
             
@@ -1050,14 +1080,14 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsAttendanceDateNull() {
-                return this.IsNull(this.tableAttendance.AttendanceDateColumn);
+            public bool IsService_DateNull() {
+                return this.IsNull(this.tableAttendance.Service_DateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetAttendanceDateNull() {
-                this[this.tableAttendance.AttendanceDateColumn] = global::System.Convert.DBNull;
+            public void SetService_DateNull() {
+                this[this.tableAttendance.Service_DateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1172,6 +1202,38 @@ namespace CityConsole {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Address1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableMembers.Address1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address1\' in table \'Members\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMembers.Address1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Address2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableMembers.Address2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address2\' in table \'Members\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMembers.Address2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Birthday {
                 get {
                     try {
@@ -1236,6 +1298,30 @@ namespace CityConsole {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEmailNull() {
                 this[this.tableMembers.EmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAddress1Null() {
+                return this.IsNull(this.tableMembers.Address1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAddress1Null() {
+                this[this.tableMembers.Address1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAddress2Null() {
+                return this.IsNull(this.tableMembers.Address2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAddress2Null() {
+                this[this.tableMembers.Address2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1457,44 +1543,44 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Attendance";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("AttendanceDate", "AttendanceDate");
+            tableMapping.ColumnMappings.Add("Service Date", "Service Date");
             tableMapping.ColumnMappings.Add("Adults", "Adults");
             tableMapping.ColumnMappings.Add("Children", "Children");
             tableMapping.ColumnMappings.Add("Notes", "Notes");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Attendance` WHERE ((`ID` = ?) AND ((? = 1 AND `AttendanceDate` IS NU" +
-                "LL) OR (`AttendanceDate` = ?)) AND ((? = 1 AND `Adults` IS NULL) OR (`Adults` = " +
-                "?)) AND ((? = 1 AND `Children` IS NULL) OR (`Children` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Attendance` WHERE ((`ID` = ?) AND ((? = 1 AND `Service Date` IS NULL" +
+                ") OR (`Service Date` = ?)) AND ((? = 1 AND `Adults` IS NULL) OR (`Adults` = ?)) " +
+                "AND ((? = 1 AND `Children` IS NULL) OR (`Children` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_AttendanceDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AttendanceDate", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_AttendanceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AttendanceDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Service_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Adults", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adults", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Adults", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adults", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Children", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Children", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Attendance` (`AttendanceDate`, `Adults`, `Children`, `Notes`) VALUES" +
-                " (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Attendance` (`Service Date`, `Adults`, `Children`, `Notes`) VALUES (" +
+                "?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("AttendanceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AttendanceDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Adults", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adults", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Children", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Notes", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Notes", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Attendance` SET `AttendanceDate` = ?, `Adults` = ?, `Children` = ?, `Notes` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `AttendanceDate` IS NULL) OR (`AttendanceDate` = ?)) AND ((? = 1 AND `Adults` IS NULL) OR (`Adults` = ?)) AND ((? = 1 AND `Children` IS NULL) OR (`Children` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Attendance` SET `Service Date` = ?, `Adults` = ?, `Children` = ?, `Notes` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Service Date` IS NULL) OR (`Service Date` = ?)) AND ((? = 1 AND `Adults` IS NULL) OR (`Adults` = ?)) AND ((? = 1 AND `Children` IS NULL) OR (`Children` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("AttendanceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AttendanceDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Adults", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adults", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Children", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Notes", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Notes", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_AttendanceDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AttendanceDate", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_AttendanceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AttendanceDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Service_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Adults", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adults", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Adults", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adults", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Children", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Original, true, null));
@@ -1514,7 +1600,7 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, AttendanceDate, Adults, Children, Notes FROM Attendance";
+            this._commandCollection[0].CommandText = "SELECT ID, [Service Date], Adults, Children, Notes FROM Attendance";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1575,11 +1661,11 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<global::System.DateTime> Original_AttendanceDate, global::System.Nullable<int> Original_Adults, global::System.Nullable<int> Original_Children) {
+        public virtual int Delete(int Original_ID, global::System.Nullable<global::System.DateTime> Original_Service_Date, global::System.Nullable<int> Original_Adults, global::System.Nullable<int> Original_Children) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_AttendanceDate.HasValue == true)) {
+            if ((Original_Service_Date.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_AttendanceDate.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Service_Date.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -1621,9 +1707,9 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> AttendanceDate, global::System.Nullable<int> Adults, global::System.Nullable<int> Children, string Notes) {
-            if ((AttendanceDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(AttendanceDate.Value));
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> Service_Date, global::System.Nullable<int> Adults, global::System.Nullable<int> Children, string Notes) {
+            if ((Service_Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Service_Date.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -1666,9 +1752,9 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> AttendanceDate, global::System.Nullable<int> Adults, global::System.Nullable<int> Children, string Notes, int Original_ID, global::System.Nullable<global::System.DateTime> Original_AttendanceDate, global::System.Nullable<int> Original_Adults, global::System.Nullable<int> Original_Children) {
-            if ((AttendanceDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(AttendanceDate.Value));
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Service_Date, global::System.Nullable<int> Adults, global::System.Nullable<int> Children, string Notes, int Original_ID, global::System.Nullable<global::System.DateTime> Original_Service_Date, global::System.Nullable<int> Original_Adults, global::System.Nullable<int> Original_Children) {
+            if ((Service_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Service_Date.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -1692,9 +1778,9 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Notes));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID));
-            if ((Original_AttendanceDate.HasValue == true)) {
+            if ((Original_Service_Date.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_AttendanceDate.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Service_Date.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
@@ -1858,12 +1944,14 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("Address1", "Address1");
+            tableMapping.ColumnMappings.Add("Address2", "Address2");
             tableMapping.ColumnMappings.Add("Birthday", "Birthday");
             tableMapping.ColumnMappings.Add("DateJoined", "DateJoined");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Members` WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `DateJoined` IS NULL) OR (`DateJoined` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Members` WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Address1` IS NULL) OR (`Address1` = ?)) AND ((? = 1 AND `Address2` IS NULL) OR (`Address2` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `DateJoined` IS NULL) OR (`DateJoined` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FirstName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, true, null));
@@ -1872,27 +1960,35 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address1", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address1", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address2", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address2", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Birthday", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Birthday", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Birthday", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Birthday", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateJoined", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateJoined", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateJoined", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateJoined", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Members` (`FirstName`, `LastName`, `Email`, `Birthday`, `DateJoined`" +
-                ") VALUES (?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Members` (`FirstName`, `LastName`, `Email`, `Address1`, `Address2`, " +
+                "`Birthday`, `DateJoined`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Birthday", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Birthday", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateJoined", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateJoined", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Members` SET `FirstName` = ?, `LastName` = ?, `Email` = ?, `Birthday` = ?, `DateJoined` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `DateJoined` IS NULL) OR (`DateJoined` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Members` SET `FirstName` = ?, `LastName` = ?, `Email` = ?, `Address1` = ?, `Address2` = ?, `Birthday` = ?, `DateJoined` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Address1` IS NULL) OR (`Address1` = ?)) AND ((? = 1 AND `Address2` IS NULL) OR (`Address2` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `DateJoined` IS NULL) OR (`DateJoined` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Birthday", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Birthday", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateJoined", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateJoined", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
@@ -1902,6 +1998,10 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address1", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address1", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address2", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address2", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Birthday", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Birthday", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Birthday", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Birthday", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateJoined", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateJoined", global::System.Data.DataRowVersion.Original, true, null));
@@ -1921,7 +2021,8 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, FirstName, LastName, Email, Birthday, DateJoined FROM Members";
+            this._commandCollection[0].CommandText = "SELECT ID, FirstName, LastName, Email, Address1, Address2, Birthday, DateJoined F" +
+                "ROM Members";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1982,7 +2083,7 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_FirstName, string Original_LastName, string Original_Email, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<global::System.DateTime> Original_DateJoined) {
+        public virtual int Delete(int Original_ID, string Original_FirstName, string Original_LastName, string Original_Email, string Original_Address1, string Original_Address2, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<global::System.DateTime> Original_DateJoined) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_FirstName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -2008,21 +2109,37 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Email));
             }
-            if ((Original_Birthday.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Birthday.Value));
-            }
-            else {
+            if ((Original_Address1 == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_DateJoined.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_DateJoined.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Address1));
+            }
+            if ((Original_Address2 == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Address2));
+            }
+            if ((Original_Birthday.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_Birthday.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DateJoined.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.DateTime)(Original_DateJoined.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2044,7 +2161,7 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FirstName, string LastName, string Email, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<global::System.DateTime> DateJoined) {
+        public virtual int Insert(string FirstName, string LastName, string Email, string Address1, string Address2, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<global::System.DateTime> DateJoined) {
             if ((FirstName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2063,17 +2180,29 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Email));
             }
-            if ((Birthday.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Birthday.Value));
-            }
-            else {
+            if ((Address1 == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((DateJoined.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DateJoined.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Address1));
+            }
+            if ((Address2 == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Address2));
+            }
+            if ((Birthday.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Birthday.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((DateJoined.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(DateJoined.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2095,7 +2224,7 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FirstName, string LastName, string Email, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<global::System.DateTime> DateJoined, int Original_ID, string Original_FirstName, string Original_LastName, string Original_Email, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<global::System.DateTime> Original_DateJoined) {
+        public virtual int Update(string FirstName, string LastName, string Email, string Address1, string Address2, global::System.Nullable<global::System.DateTime> Birthday, global::System.Nullable<global::System.DateTime> DateJoined, int Original_ID, string Original_FirstName, string Original_LastName, string Original_Email, string Original_Address1, string Original_Address2, global::System.Nullable<global::System.DateTime> Original_Birthday, global::System.Nullable<global::System.DateTime> Original_DateJoined) {
             if ((FirstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2114,58 +2243,86 @@ namespace CityConsole.CityonaHillDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Email));
             }
-            if ((Birthday.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Birthday.Value));
-            }
-            else {
+            if ((Address1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((DateJoined.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DateJoined.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Address1));
+            }
+            if ((Address2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID));
-            if ((Original_FirstName == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Address2));
+            }
+            if ((Birthday.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Birthday.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_FirstName));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_LastName == null)) {
+            if ((DateJoined.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(DateJoined.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
+            if ((Original_FirstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_LastName));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_FirstName));
             }
-            if ((Original_Email == null)) {
+            if ((Original_LastName == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_LastName));
             }
-            if ((Original_Birthday.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_Birthday.Value));
-            }
-            else {
+            if ((Original_Email == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_DateJoined.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_DateJoined.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Email));
+            }
+            if ((Original_Address1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Address1));
+            }
+            if ((Original_Address2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Address2));
+            }
+            if ((Original_Birthday.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_Birthday.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DateJoined.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_DateJoined.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
