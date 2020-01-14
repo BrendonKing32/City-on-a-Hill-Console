@@ -58,7 +58,7 @@
             // textBox_Adults
             // 
             this.textBox_Adults.Location = new System.Drawing.Point(71, 36);
-            this.textBox_Adults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Adults.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Adults.Name = "textBox_Adults";
             this.textBox_Adults.Size = new System.Drawing.Size(141, 20);
             this.textBox_Adults.TabIndex = 1;
@@ -66,7 +66,7 @@
             // textBox_Children
             // 
             this.textBox_Children.Location = new System.Drawing.Point(71, 58);
-            this.textBox_Children.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Children.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Children.Name = "textBox_Children";
             this.textBox_Children.Size = new System.Drawing.Size(141, 20);
             this.textBox_Children.TabIndex = 2;
@@ -84,7 +84,7 @@
             // button_Submit
             // 
             this.button_Submit.Location = new System.Drawing.Point(156, 137);
-            this.button_Submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Submit.Margin = new System.Windows.Forms.Padding(2);
             this.button_Submit.Name = "button_Submit";
             this.button_Submit.Size = new System.Drawing.Size(56, 19);
             this.button_Submit.TabIndex = 4;
@@ -112,7 +112,7 @@
             "Special Speaker",
             "Special Event"});
             this.comboBox_Notes.Location = new System.Drawing.Point(71, 81);
-            this.comboBox_Notes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_Notes.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_Notes.Name = "comboBox_Notes";
             this.comboBox_Notes.Size = new System.Drawing.Size(141, 21);
             this.comboBox_Notes.TabIndex = 3;
@@ -130,6 +130,7 @@
             this.Controls.Add(this.textBox_Adults);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AttendanceForm";
             this.Text = "Attendance";
             this.ResumeLayout(false);

@@ -199,6 +199,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_First);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NewDirectoryForm";
             this.Text = "New Member";
             this.ResumeLayout(false);
