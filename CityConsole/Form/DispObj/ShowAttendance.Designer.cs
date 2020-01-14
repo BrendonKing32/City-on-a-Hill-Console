@@ -34,12 +34,12 @@
             this.attendanceTableAdapter = new CityConsole.CityonaHillDataSetTableAdapters.AttendanceTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cityonaHillDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button_Close = new System.Windows.Forms.Button();
+            this.button_Refresh = new System.Windows.Forms.Button();
             this.attendanceDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adultsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.childrenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_Close = new System.Windows.Forms.Button();
-            this.button_Refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.attendanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityonaHillDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,9 +80,29 @@
             this.cityonaHillDataSetBindingSource.DataSource = this.cityonaHillDataSet;
             this.cityonaHillDataSetBindingSource.Position = 0;
             // 
+            // button_Close
+            // 
+            this.button_Close.Location = new System.Drawing.Point(380, 381);
+            this.button_Close.Name = "button_Close";
+            this.button_Close.Size = new System.Drawing.Size(75, 23);
+            this.button_Close.TabIndex = 1;
+            this.button_Close.Text = "Close";
+            this.button_Close.UseVisualStyleBackColor = true;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
+            // 
+            // button_Refresh
+            // 
+            this.button_Refresh.Location = new System.Drawing.Point(299, 381);
+            this.button_Refresh.Name = "button_Refresh";
+            this.button_Refresh.Size = new System.Drawing.Size(75, 23);
+            this.button_Refresh.TabIndex = 2;
+            this.button_Refresh.Text = "Refresh";
+            this.button_Refresh.UseVisualStyleBackColor = true;
+            this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
+            // 
             // attendanceDateDataGridViewTextBoxColumn
             // 
-            this.attendanceDateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.attendanceDateDataGridViewTextBoxColumn.DataPropertyName = "Service Date";
             this.attendanceDateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.attendanceDateDataGridViewTextBoxColumn.Name = "attendanceDateDataGridViewTextBoxColumn";
             // 
@@ -104,31 +124,11 @@
             this.notesDataGridViewTextBoxColumn.HeaderText = "Notes";
             this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
             // 
-            // button_Close
-            // 
-            this.button_Close.Location = new System.Drawing.Point(380, 372);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(75, 23);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.Text = "Close";
-            this.button_Close.UseVisualStyleBackColor = true;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
-            // button_Refresh
-            // 
-            this.button_Refresh.Enabled = false;
-            this.button_Refresh.Location = new System.Drawing.Point(299, 372);
-            this.button_Refresh.Name = "button_Refresh";
-            this.button_Refresh.Size = new System.Drawing.Size(75, 23);
-            this.button_Refresh.TabIndex = 2;
-            this.button_Refresh.Text = "Refresh";
-            this.button_Refresh.UseVisualStyleBackColor = true;
-            // 
             // ShowAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 404);
+            this.ClientSize = new System.Drawing.Size(467, 416);
             this.Controls.Add(this.button_Refresh);
             this.Controls.Add(this.button_Close);
             this.Controls.Add(this.dataGridView1);
@@ -148,12 +148,12 @@
         private System.Windows.Forms.BindingSource attendanceBindingSource;
         private CityonaHillDataSetTableAdapters.AttendanceTableAdapter attendanceTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource cityonaHillDataSetBindingSource;
+        private System.Windows.Forms.Button button_Close;
+        private System.Windows.Forms.Button button_Refresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn attendanceDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adultsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn childrenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource cityonaHillDataSetBindingSource;
-        private System.Windows.Forms.Button button_Close;
-        private System.Windows.Forms.Button button_Refresh;
     }
 }

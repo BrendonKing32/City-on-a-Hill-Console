@@ -79,5 +79,10 @@ namespace CityConsole
         {
             attendanceRecordToolStripMenuItem_Click(sender, e);
         }
+
+        private void button_UpdateDirectory_Click(object sender, EventArgs e)
+        {
+            memberToolStripMenuItem_Click(sender, e);
+        }
     }
 }

@@ -28,5 +28,10 @@ namespace CityConsole
         {
             this.Close();
         }
+
+        private void button_Refresh_Click(object sender, EventArgs e)
+        {
+            this.attendanceTableAdapter.Fill(this.cityonaHillDataSet.Attendance);
+        }
     }
 }

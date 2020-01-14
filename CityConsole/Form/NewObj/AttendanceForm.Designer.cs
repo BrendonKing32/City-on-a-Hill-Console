@@ -83,7 +83,7 @@
             // 
             // button_Submit
             // 
-            this.button_Submit.Location = new System.Drawing.Point(156, 137);
+            this.button_Submit.Location = new System.Drawing.Point(157, 106);
             this.button_Submit.Margin = new System.Windows.Forms.Padding(2);
             this.button_Submit.Name = "button_Submit";
             this.button_Submit.Size = new System.Drawing.Size(56, 19);
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(224, 167);
+            this.ClientSize = new System.Drawing.Size(224, 134);
             this.Controls.Add(this.comboBox_Notes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_Submit);

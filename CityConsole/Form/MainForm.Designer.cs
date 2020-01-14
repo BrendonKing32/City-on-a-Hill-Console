@@ -94,33 +94,33 @@
             this.donationRecordToolStripMenuItem,
             this.noteToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.newToolStripMenuItem.Text = "New...";
             // 
             // memberToolStripMenuItem
             // 
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.memberToolStripMenuItem.Text = "Member";
             this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
             // 
             // attendanceRecordToolStripMenuItem
             // 
             this.attendanceRecordToolStripMenuItem.Name = "attendanceRecordToolStripMenuItem";
-            this.attendanceRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.attendanceRecordToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.attendanceRecordToolStripMenuItem.Text = "Attendance Record";
             this.attendanceRecordToolStripMenuItem.Click += new System.EventHandler(this.attendanceRecordToolStripMenuItem_Click);
             // 
             // donationRecordToolStripMenuItem
             // 
             this.donationRecordToolStripMenuItem.Name = "donationRecordToolStripMenuItem";
-            this.donationRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.donationRecordToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.donationRecordToolStripMenuItem.Text = "Donation Record";
             // 
             // noteToolStripMenuItem
             // 
             this.noteToolStripMenuItem.Name = "noteToolStripMenuItem";
-            this.noteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.noteToolStripMenuItem.Text = "Note";
             this.noteToolStripMenuItem.Click += new System.EventHandler(this.noteToolStripMenuItem_Click);
             // 
@@ -130,25 +130,25 @@
             this.attendanceHistoryToolStripMenuItem,
             this.donationHistoryToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.openToolStripMenuItem.Text = "Open...";
             // 
             // attendanceHistoryToolStripMenuItem
             // 
             this.attendanceHistoryToolStripMenuItem.Name = "attendanceHistoryToolStripMenuItem";
-            this.attendanceHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.attendanceHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.attendanceHistoryToolStripMenuItem.Text = "Attendance History";
             // 
             // donationHistoryToolStripMenuItem
             // 
             this.donationHistoryToolStripMenuItem.Name = "donationHistoryToolStripMenuItem";
-            this.donationHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.donationHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.donationHistoryToolStripMenuItem.Text = "Donation History";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -239,6 +239,7 @@
             this.button_UpdateDirectory.TabIndex = 3;
             this.button_UpdateDirectory.Text = "Add Directory";
             this.button_UpdateDirectory.UseVisualStyleBackColor = true;
+            this.button_UpdateDirectory.Click += new System.EventHandler(this.button_UpdateDirectory_Click);
             // 
             // button5
             // 
