@@ -132,13 +132,13 @@
             // attendanceHistoryToolStripMenuItem
             // 
             this.attendanceHistoryToolStripMenuItem.Name = "attendanceHistoryToolStripMenuItem";
-            this.attendanceHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.attendanceHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.attendanceHistoryToolStripMenuItem.Text = "Attendance History";
             // 
             // donationHistoryToolStripMenuItem
             // 
             this.donationHistoryToolStripMenuItem.Name = "donationHistoryToolStripMenuItem";
-            this.donationHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.donationHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.donationHistoryToolStripMenuItem.Text = "Donation History";
             // 
             // exitToolStripMenuItem
@@ -222,6 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 387);
+            this.ControlBox = false;
             this.Controls.Add(this.label_Time);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button_Directory);
