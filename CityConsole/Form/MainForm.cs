@@ -68,5 +68,10 @@ namespace CityConsole
         {
 
         }
+
+        private void timer_SystemTime_Tick(object sender, EventArgs e)
+        {
+            label_Time.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
     }
 }

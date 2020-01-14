@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -47,6 +48,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button_Directory = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label_Time = new System.Windows.Forms.Label();
+            this.timer_SystemTime = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,7 +168,7 @@
             this.button_Attendance.Location = new System.Drawing.Point(608, 33);
             this.button_Attendance.Name = "button_Attendance";
             this.button_Attendance.Size = new System.Drawing.Size(180, 81);
-            this.button_Attendance.TabIndex = 3;
+            this.button_Attendance.TabIndex = 2;
             this.button_Attendance.Text = "Attendance";
             this.button_Attendance.UseVisualStyleBackColor = true;
             this.button_Attendance.Click += new System.EventHandler(this.button_Attendance_Click);
@@ -184,7 +187,7 @@
             this.button_Directory.Location = new System.Drawing.Point(608, 120);
             this.button_Directory.Name = "button_Directory";
             this.button_Directory.Size = new System.Drawing.Size(180, 81);
-            this.button_Directory.TabIndex = 6;
+            this.button_Directory.TabIndex = 3;
             this.button_Directory.Text = "Directory";
             this.button_Directory.UseVisualStyleBackColor = true;
             this.button_Directory.Click += new System.EventHandler(this.button_Directory_Click);
@@ -194,15 +197,32 @@
             this.button4.Location = new System.Drawing.Point(608, 294);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(180, 81);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 5;
             this.button4.Text = "Notes";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label_Time
+            // 
+            this.label_Time.AutoSize = true;
+            this.label_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Time.Location = new System.Drawing.Point(12, 362);
+            this.label_Time.Name = "label_Time";
+            this.label_Time.Size = new System.Drawing.Size(40, 16);
+            this.label_Time.TabIndex = 8;
+            this.label_Time.Text = "clock";
+            // 
+            // timer_SystemTime
+            // 
+            this.timer_SystemTime.Enabled = true;
+            this.timer_SystemTime.Interval = 1000;
+            this.timer_SystemTime.Tick += new System.EventHandler(this.timer_SystemTime_Tick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 387);
+            this.Controls.Add(this.label_Time);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button_Directory);
             this.Controls.Add(this.button3);
@@ -243,6 +263,8 @@
         private System.Windows.Forms.ToolStripMenuItem attendanceRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donationRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem noteToolStripMenuItem;
+        private System.Windows.Forms.Label label_Time;
+        private System.Windows.Forms.Timer timer_SystemTime;
     }
 }
 
