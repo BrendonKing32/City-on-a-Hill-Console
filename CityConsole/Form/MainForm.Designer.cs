@@ -50,6 +50,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label_Time = new System.Windows.Forms.Label();
             this.timer_SystemTime = new System.Windows.Forms.Timer(this.components);
+            this.button_UpdateAttendance = new System.Windows.Forms.Button();
+            this.button_UpdateDirectory = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,7 +172,7 @@
             this.button_Attendance.Location = new System.Drawing.Point(608, 33);
             this.button_Attendance.Name = "button_Attendance";
             this.button_Attendance.Size = new System.Drawing.Size(180, 81);
-            this.button_Attendance.TabIndex = 2;
+            this.button_Attendance.TabIndex = 6;
             this.button_Attendance.Text = "Attendance";
             this.button_Attendance.UseVisualStyleBackColor = true;
             this.button_Attendance.Click += new System.EventHandler(this.button_Attendance_Click);
@@ -178,7 +182,7 @@
             this.button3.Location = new System.Drawing.Point(608, 207);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(180, 81);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 8;
             this.button3.Text = "Donation";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +191,7 @@
             this.button_Directory.Location = new System.Drawing.Point(608, 120);
             this.button_Directory.Name = "button_Directory";
             this.button_Directory.Size = new System.Drawing.Size(180, 81);
-            this.button_Directory.TabIndex = 3;
+            this.button_Directory.TabIndex = 7;
             this.button_Directory.Text = "Directory";
             this.button_Directory.UseVisualStyleBackColor = true;
             this.button_Directory.Click += new System.EventHandler(this.button_Directory_Click);
@@ -197,7 +201,7 @@
             this.button4.Location = new System.Drawing.Point(608, 294);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(180, 81);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 9;
             this.button4.Text = "Notes";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -217,12 +221,51 @@
             this.timer_SystemTime.Interval = 1000;
             this.timer_SystemTime.Tick += new System.EventHandler(this.timer_SystemTime_Tick);
             // 
+            // button_UpdateAttendance
+            // 
+            this.button_UpdateAttendance.Location = new System.Drawing.Point(422, 33);
+            this.button_UpdateAttendance.Name = "button_UpdateAttendance";
+            this.button_UpdateAttendance.Size = new System.Drawing.Size(180, 81);
+            this.button_UpdateAttendance.TabIndex = 2;
+            this.button_UpdateAttendance.Text = "Add Attendance";
+            this.button_UpdateAttendance.UseVisualStyleBackColor = true;
+            this.button_UpdateAttendance.Click += new System.EventHandler(this.button_UpdateAttendance_Click);
+            // 
+            // button_UpdateDirectory
+            // 
+            this.button_UpdateDirectory.Location = new System.Drawing.Point(422, 120);
+            this.button_UpdateDirectory.Name = "button_UpdateDirectory";
+            this.button_UpdateDirectory.Size = new System.Drawing.Size(180, 81);
+            this.button_UpdateDirectory.TabIndex = 3;
+            this.button_UpdateDirectory.Text = "Add Directory";
+            this.button_UpdateDirectory.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(422, 207);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(180, 81);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Add Donation";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(422, 297);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(180, 81);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Add Notes";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(800, 387);
-            this.ControlBox = false;
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button_UpdateDirectory);
+            this.Controls.Add(this.button_UpdateAttendance);
             this.Controls.Add(this.label_Time);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button_Directory);
@@ -234,6 +277,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "City on a Hill Console";
@@ -266,6 +310,10 @@
         private System.Windows.Forms.ToolStripMenuItem noteToolStripMenuItem;
         private System.Windows.Forms.Label label_Time;
         private System.Windows.Forms.Timer timer_SystemTime;
+        private System.Windows.Forms.Button button_UpdateAttendance;
+        private System.Windows.Forms.Button button_UpdateDirectory;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

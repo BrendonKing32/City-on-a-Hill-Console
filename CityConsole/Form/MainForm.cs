@@ -73,5 +73,10 @@ namespace CityConsole
         {
             label_Time.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+        private void button_UpdateAttendance_Click(object sender, EventArgs e)
+        {
+            attendanceRecordToolStripMenuItem_Click(sender, e);
+        }
     }
 }
