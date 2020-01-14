@@ -108,6 +108,9 @@
     <Compile Include="Form\DispObj\ShowDonation.Designer.cs">
       <DependentUpon>ShowDonation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\DispObj\ShowAttendance.resx">
+      <DependentUpon>ShowAttendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\NewObj\NewDirectoryForm.resx">
       <DependentUpon>NewDirectoryForm.cs</DependentUpon>
     </EmbeddedResource>

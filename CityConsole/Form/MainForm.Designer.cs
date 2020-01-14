@@ -44,7 +44,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_Attendance = new System.Windows.Forms.Button();
+            this.button_ShowAttendance = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button_Directory = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -167,15 +167,15 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // button_Attendance
+            // button_ShowAttendance
             // 
-            this.button_Attendance.Location = new System.Drawing.Point(608, 33);
-            this.button_Attendance.Name = "button_Attendance";
-            this.button_Attendance.Size = new System.Drawing.Size(180, 81);
-            this.button_Attendance.TabIndex = 6;
-            this.button_Attendance.Text = "Attendance";
-            this.button_Attendance.UseVisualStyleBackColor = true;
-            this.button_Attendance.Click += new System.EventHandler(this.button_Attendance_Click);
+            this.button_ShowAttendance.Location = new System.Drawing.Point(608, 33);
+            this.button_ShowAttendance.Name = "button_ShowAttendance";
+            this.button_ShowAttendance.Size = new System.Drawing.Size(180, 81);
+            this.button_ShowAttendance.TabIndex = 6;
+            this.button_ShowAttendance.Text = "Attendance";
+            this.button_ShowAttendance.UseVisualStyleBackColor = true;
+            this.button_ShowAttendance.Click += new System.EventHandler(this.button_Attendance_Click);
             // 
             // button3
             // 
@@ -270,7 +270,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button_Directory);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button_Attendance);
+            this.Controls.Add(this.button_ShowAttendance);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -295,7 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Button button_Attendance;
+        private System.Windows.Forms.Button button_ShowAttendance;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button button_Directory;
